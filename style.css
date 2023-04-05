@@ -1,0 +1,128 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* universal selector applies styles in whole document */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* define the font family in the body to have this font in whole document */
+body {
+    font-family: 'Alexandria', sans-serif;
+    width: 100%;
+}
+
+/* main styles of the website */
+.app {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 0 0 0;
+}
+#navbar {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+#navbar, 
+#content {
+    padding: 15px;
+}
+#navbar .link {
+    margin: 0;
+    padding: 0;
+}
+#navbar button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 10em;
+    font-weight: 900;
+    letter-spacing: 0;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateY(-80px);
+} 
+#navbar button:hover {
+    font-weight: 100;
+    color: orange;
+}
+#content {
+    width: 0%;
+    height: 100%;
+    opacity: 0;
+    background-color: transparent;
+    transition: all 0.5s ease-out;
+    padding: 20px;
+}
+#content p {
+    font-size: 2em;
+    color: white;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.fontBig {
+    animation-name: smallerFont;
+    animation-duration: .8s;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+}
+@keyframes smallerFont {
+    from {
+        font-size: 10em;
+    }
+    to {
+        font-size: 4em;
+    }
+}
+.fontMiddle {
+    animation-name: extraSmallerFont;
+    animation-duration: .8s;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+}
+@keyframes extraSmallerFont {
+    from {
+        font-size: 4em;
+    }
+    to {
+        font-size: 10em;
+    }
+}
+.textTranslate {
+    animation-name: textTranslateSmooth;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+}
+.delay-1 {
+    animation-duration: .3s;
+}
+.delay-2 {
+    animation-duration: .7s;
+}
+.delay-3 {
+    animation-duration: 1.1s;
+}
+@keyframes textTranslateSmooth {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
